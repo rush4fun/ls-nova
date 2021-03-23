@@ -1,0 +1,260 @@
+:root {
+    --yellow: #ffe284;
+}
+/* ----------------------------------------------------ICOMOON---------------------------------------------------------- */
+@font-face {
+    font-family: "icomoon";
+    src: url("fonts/icomoon.eot?r7e0ib");
+    src: url("fonts/icomoon.eot?r7e0ib#iefix") format("embedded-opentype"),
+        url("fonts/icomoon.ttf?r7e0ib") format("truetype"), url("fonts/icomoon.woff?r7e0ib") format("woff"),
+        url("fonts/icomoon.svg?r7e0ib#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+    content: "\e903";
+    color: #fff;
+    font-family: "icomoon";
+}
+.icon-instagram:before {
+    content: "\e900";
+    font-family: "icomoon";
+}
+.icon-mail:before {
+    content: "\e901";
+    font-family: "icomoon";
+}
+.icon-whatsapp:before {
+    content: "\e902";
+    font-family: "icomoon";
+}
+
+/* --------------------------------------------------- RESET CSS */
+
+/* Указываем box sizing */
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+
+ul,
+ol {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+
+a:not([class]) {
+    -webkit-text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+/* Упрощаем работу с изображениями */
+
+img {
+    max-width: 100%;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* --------------------------------------------------- COMMON STYLES */
+
+html {
+    font-size: 10px;
+}
+
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+header {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+}
+main {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+footer {
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+}
+body * {
+    font-family: "Rubik", sans-serif;
+    color: #fff;
+    line-height: 1.4;
+}
+.wrapper {
+    max-width: 1152px;
+    width: 100%;
+}
+.container {
+    max-width: 890px;
+    padding: 0 1rem;
+}
+.wrapper,
+.container {
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3.4rem;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.2rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.5rem;
+    min-width: 13rem;
+    background-color: var(--yellow);
+    box-shadow: 0px 3px 6px #ab9960;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    line-height: 19px;
+    color: #4a4a4a;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    box-shadow: 0px 3px 6px #ab9960;
+}
+/* ---------------------------------------------------------HEADER------------------------------------------------------------- */
+.header {
+    background-color: #4a4a4a;
+}
+.header__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #bebebe;
+}
+.logo__wrapper {
+    flex: 1 0 auto;
+}
+.header__contacts {
+    margin-right: 1.8rem;
+}
+.header__contacts a {
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.1rem;
+    font-family: "Rubik", sans-serif;
+    margin-bottom: 0.5rem;
+}
+.header__contacts p {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: 300;
+}
+.header .btn {
+    padding: 0.8rem 1.5rem;
+    box-shadow: 0px 1px 6px #ffe284;
+    border-radius: 30px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #2c2c2c;
+    text-decoration: underline;
+}
