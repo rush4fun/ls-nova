@@ -135,32 +135,19 @@ html {
     font-size: 10px;
 }
 
-body {
-    display: -webkit-box;
-    display: -ms-flexbox;
+body .wrapper {
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 header {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
     order: 1;
 }
 main {
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
     order: 2;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
     flex-grow: 1;
 }
 footer {
-    -webkit-box-ordinal-group: 4;
-    -ms-flex-order: 3;
     order: 3;
 }
 body * {
@@ -170,7 +157,6 @@ body * {
 }
 .wrapper {
     max-width: 1152px;
-    width: 100%;
 }
 .container {
     max-width: 890px;
@@ -184,9 +170,13 @@ body * {
 h1 {
     font-size: 3.4rem;
     line-height: 40px;
+    font-weight: 500;
     text-transform: uppercase;
+    margin-bottom: 1.5rem;
 }
-
+h1 span {
+    color: var(--yellow);
+}
 h2 {
     font-size: 3rem;
 }
@@ -197,6 +187,7 @@ h3 {
 
 h4 {
     font-size: 1.8rem;
+    line-height: 21px;
 }
 
 p {
@@ -218,6 +209,19 @@ p {
 
 .btn:hover {
     box-shadow: 0px 3px 6px #ab9960;
+}
+.video-link {
+    display: flex;
+    align-items: center;
+}
+.video-link::before {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 34px;
+    background-image: url("../img/icons/play.png");
+    background-size: cover;
+    margin-right: 5px;
 }
 /* ---------------------------------------------------------HEADER------------------------------------------------------------- */
 .header {
@@ -243,6 +247,7 @@ p {
     line-height: 2.1rem;
     font-family: "Rubik", sans-serif;
     margin-bottom: 0.5rem;
+    justify-content: flex-end;
 }
 .header__contacts p {
     font-size: 1rem;
@@ -257,4 +262,133 @@ p {
     line-height: 14px;
     color: #2c2c2c;
     text-decoration: underline;
+}
+.header__video-link {
+    display: none;
+    line-height: 12px;
+    font-weight: 300;
+}
+/* ---------------------------------------------------------MAIN SECTION------------------------------------------------------------- */
+.main-section {
+    background-color: #4A4A4A;
+    padding-bottom: 18rem;
+    position: relative;
+    overflow: hidden;
+}
+.main-section__inner {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 2rem 0;
+}
+.main-section .content {
+    flex: 0 0 55%;
+    padding: 4.5rem 0;
+}
+.main-section__town {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--yellow);
+    border-radius: 5px;
+    color: #414045;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 2.5rem;
+}
+.main-section h4 {
+    font-weight: 400;
+    margin-bottom: 6.5rem;
+}
+.main-section__buttons {
+    display: flex;
+    flex-flow: row wrap;
+}
+.main-section .btn {
+    margin-right: 2.5em;
+    margin-bottom: 2rem;
+}
+.main-section__calc {
+    display: inline-block;
+    padding: 1.7rem 1rem;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration-line: underline;
+    border: 1px solid #FFE284;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 2px 5px #AB9960);
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+.main-img {
+    position: absolute;
+    bottom: 0;
+    right: 19.5rem;
+    z-index: 1;
+}
+.main-img img {
+    object-fit: cover;
+}
+.main-img::after {
+    content: url(../img/circle-main.png);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: -1;
+}
+.main-img figcaption {
+    position: absolute;
+    bottom: 12.5rem;
+    right: 0rem;
+    padding: 0.5rem;
+    color: #2C2C2C;
+    font-size: 16px;
+    line-height: 19px;
+    z-index: 1;
+}
+.main-img figcaption::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 15.2rem;
+    height: 2.7rem;
+    top: 50%;
+    left: 50%;
+        transform: translateY(-50%) translateX(-50%) skew(-20deg, 0deg);
+    z-index: -1;
+    background-color: var(--yellow);
+    box-shadow: 0px 0px 10px #FFE284;
+    border-radius: 5px;
+}
+.main__video-link {
+    position: absolute;
+    right: 3.5rem;
+    top: 19.7rem;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    z-index: 1;
+}
+.main__video-link::before {
+    width: 5rem;
+    height: 5rem;
+}
+/* ---------------------------------------------------------MEDIA QUERIES------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+    
+}
+@media screen and (max-width: 576px) {
+    .header .logo {
+        display: none;
+    }
+    .header__video-link {
+        display: flex;
+    }
+    .header .btn {
+        display: none;
+    }
+    .header__contacts a {
+        font-size: 14px;
+        line-height: 17px;
+    }
 }
