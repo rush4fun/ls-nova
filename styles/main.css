@@ -388,18 +388,14 @@ p {
     overflow: hidden;
 }
 .advantages__inner {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 .advantages__list {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    width: 90%;
     margin: 0 -2.25rem;
-}
-.advantages__inner > *:last-child {
-    margin-right: 0;
 }
 .advantages-block__wrapper {
     flex: 0 0 25%;
@@ -410,6 +406,7 @@ p {
     flex-direction: column;
     align-items: center;
     position: relative;
+    width: 15.7rem;
     height: 16.5rem;
     text-align: center;
     background-color: #fff;
@@ -640,49 +637,156 @@ p {
 }
 /* ----------------------------------------------------------OUR WORK------------------------------------------------------------- */
 .our-work {
-	padding: 4rem 13rem 2rem 13rem;
+    padding: 4rem 0 2rem 0;
+    overflow: hidden;
 }
 .our-work h2 {
-	font-weight: 700;
-	font-size: 32px;
-	line-height: 38px;
-	text-align: center;
-	color: #2C2C2C;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #2c2c2c;
 }
 .our-work__list {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	padding-top: 4rem;
-	margin: 0 -3rem;  
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-top: 4rem;
 }
 .our-work___wrapper {
-	flex: 0 0 33.333%;
-	margin-bottom: 5rem;
+    flex: 0 0 33.333%;
+    padding: 0 3rem;
+    padding-bottom: 5rem;
 }
 .our-work__item {
-	padding: 0 3rem;
-	display: flex;
-	flex-flow: row nowrap;
+    display: flex;
+    flex-flow: row nowrap;
 }
 .our-work__item img {
-	object-fit: contain;
-	margin-right: 0.5rem;
+    object-fit: contain;
+    margin-right: 0.5rem;
 }
 .our-work__content span {
-	display: inline-block;
-	font-weight: 500;
-	font-size: 36px;
-	line-height: 43px;
-	color: #2C2C2C;
-	margin-bottom: 0.5rem;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 43px;
+    color: #2c2c2c;
+    margin-bottom: 0.5rem;
 }
 .our-work__content p {
-	font-size: 18px;
-	line-height: 21px;
-	color: #2C2C2C;
+    font-size: 18px;
+    line-height: 21px;
+    color: #2c2c2c;
+}
+.our-work .arrow::before {
+    display: none;
+}
+/* ---------------------------------------------------------TASKS------------------------------------------------------------- */
+.tasks {
+    position: relative;
+    padding: 4rem 0 12rem 0;
+    overflow: hidden;
+    z-index: 1;
+    background: url(../img/bg-tasks.jpg) no-repeat;
+    background-size: cover;
+}
+.tasks::before {
+    content: url(../img/kassa.png);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 25rem;
+    left: 10rem;
+    z-index: -1;
+}
+.tasks::after {
+    content: url(../img/pen.png);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 54rem;
+    left: 90rem;
+    z-index: 1;
+    pointer-events: none;
+}
+.tasks h2 {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+    color: #2c2c2c;
+    margin-bottom: 5rem;
+}
+.tasks__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 -2rem;
+}
+.tasks__item-wrapper {
+    flex: 0 0 50%;
+    padding: 0 2rem;
+}
+.tasks__item {
+    background: #ffffff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 2rem 1rem;
+    margin-bottom: 2.5rem;
+}
+.tasks__item p,
+.tasks__item span {
+    color: #2c2c2c;
+}
+.tasks__item img {
+    object-fit: cover;
+    margin-right: 1.5rem;
+}
+.profile__block {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2.5rem;
+}
+.profile__info span {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+}
+.profile__info p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+}
+.tasks__content {
+    padding: 0 0.5rem 1rem 1.5rem;
+}
+.tasks__content .tasks-content__block {
+    min-height: 14.5rem;
+}
+.tasks__content > .tasks-content__block:last-child {
+    min-height: auto;
+}
+.tasks .tasks__heading {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 1rem;
+}
+.tasks-content__block p {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 12px;
+}
+.tasks-content__block--deadline .tasks__heading {
+    margin-bottom: 0.5rem;
 }
 /* ---------------------------------------------------------MEDIA QUERIES------------------------------------------------------------- */
+@media screen and (max-width: 810px) {
+    .our-work___wrapper {
+        flex: 0 0 50%;
+    }
+}
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 2.2rem;
@@ -724,6 +828,16 @@ p {
     }
     .subscribe__content {
         text-align: center;
+    }
+}
+@media screen and (max-width: 650px) {
+    /* TASKS */
+    .tasks::after,
+    .tasks::before {
+        display: none;
+    }
+    .tasks__item-wrapper {
+        flex: 0 0 51%;
     }
 }
 @media screen and (max-width: 576px) {
@@ -792,12 +906,15 @@ p {
     .work-with-us__item::after {
         display: none;
     }
-    .work-with-us__item::before {
+    .arrow::before {
         width: 8px;
         height: 21px;
         bottom: 0;
         top: auto;
         background: url(../img/icons/arrow.png) center no-repeat;
+    }
+    .arrow:last-child::before {
+        display: none;
     }
     /*SUBSCRIBE*/
     .subscribe h2 {
@@ -865,6 +982,66 @@ p {
     }
     /*OUR WORK*/
     .our-work {
-    	padding: 4rem 3.5rem 2rem 6.5rem;
+        padding: 4rem 0 2rem 0;
+    }
+    .our-work__list {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2.5rem;
+    }
+    .our-work__item img {
+        max-width: 8rem;
+        width: 100%;
+    }
+    .our-work___wrapper {
+        position: relative;
+        width: 46%;
+    }
+    .our-work .arrow::before {
+        display: block;
+        bottom: 2rem;
+    }
+    .our-work .arrow:last-child:before {
+        display: none;
+    }
+    .our-work h2 {
+        font-size: 2rem;
+    }
+    .our-work__content p {
+        font-size: 1.6rem;
+    }
+    /* TASKS */
+    .tasks {
+        padding-bottom: 0;
+    }
+    .tasks h2 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .tasks__item-wrapper {
+        flex: 0 0 100%;
+    }
+    .tasks__item {
+        padding: 2rem 2.5rem;
+    }
+    .profile__info span {
+        font-size: 1.6rem;
+    }
+    .profile__info p {
+        font-size: 1.2rem;
+    }
+    .tasks__item img {
+        width: 7rem;
+        height: 7rem;
+    }
+    .tasks__content {
+        padding: 0;
+    }
+    .tasks__content .tasks-content__block {
+        min-height: auto;
+        margin-bottom: 1rem;
+    }
+    .tasks .tasks__heading {
+        font-size: 1.4rem;
     }
 }
