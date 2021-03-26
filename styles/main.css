@@ -388,9 +388,14 @@ p {
     overflow: hidden;
 }
 .advantages__inner {
+	display: flex;
+	justify-content: center;
+}
+.advantages__list {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    width: 90%;
     margin: 0 -2.25rem;
 }
 .advantages__inner > *:last-child {
@@ -405,7 +410,6 @@ p {
     flex-direction: column;
     align-items: center;
     position: relative;
-    width: 15.7rem;
     height: 16.5rem;
     text-align: center;
     background-color: #fff;
@@ -474,7 +478,7 @@ p {
     padding-top: 4rem;
     flex: 0 0 33.333%;
 }
-.work-with-us__item::before {
+.arrow::before {
     content: "";
     position: absolute;
     display: block;
@@ -530,7 +534,7 @@ p {
 }
 /* ---------------------------------------------------------DECISION------------------------------------------------------------- */
 .decision {
-    padding-top: 5.5rem;
+    padding: 5.5rem 0 1rem 0;
     background: url(../img/bg-decision.jpg) center no-repeat;
     background-size: cover;
     position: relative;
@@ -633,6 +637,50 @@ p {
     display: flex;
     flex-flow: row wrap;
     padding-top: 3.3rem;
+}
+/* ----------------------------------------------------------OUR WORK------------------------------------------------------------- */
+.our-work {
+	padding: 4rem 13rem 2rem 13rem;
+}
+.our-work h2 {
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 38px;
+	text-align: center;
+	color: #2C2C2C;
+}
+.our-work__list {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	padding-top: 4rem;
+	margin: 0 -3rem;  
+}
+.our-work___wrapper {
+	flex: 0 0 33.333%;
+	margin-bottom: 5rem;
+}
+.our-work__item {
+	padding: 0 3rem;
+	display: flex;
+	flex-flow: row nowrap;
+}
+.our-work__item img {
+	object-fit: contain;
+	margin-right: 0.5rem;
+}
+.our-work__content span {
+	display: inline-block;
+	font-weight: 500;
+	font-size: 36px;
+	line-height: 43px;
+	color: #2C2C2C;
+	margin-bottom: 0.5rem;
+}
+.our-work__content p {
+	font-size: 18px;
+	line-height: 21px;
+	color: #2C2C2C;
 }
 /* ---------------------------------------------------------MEDIA QUERIES------------------------------------------------------------- */
 @media screen and (max-width: 768px) {
@@ -797,7 +845,7 @@ p {
         align-items: center;
         justify-content: center;
         height: 17.5rem;
-        flex: 0 0 49%;
+        flex: 0 0 57%;
     }
     .decision__item img {
         position: static;
@@ -814,5 +862,9 @@ p {
         left: 30%;
         bottom: 0;
         transform: none;
+    }
+    /*OUR WORK*/
+    .our-work {
+    	padding: 4rem 3.5rem 2rem 6.5rem;
     }
 }
