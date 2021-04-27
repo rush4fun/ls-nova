@@ -1,16 +1,654 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Ls-nova</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
+    <meta name="description" content="Бухгалтерский аутсорсинг нестабильные решения от компании LsNova г.Нур-Султан">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="http://example.com/2017/09/a-new-article-to-read.html">
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '591760608450384');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=591760608450384&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <style>
+        :root {
+            --yellow: #ffe284
+        }
+
+        @font-face {
+            font-family: icomoon;
+            src: url(fonts/icomoon.eot?r7e0ib);
+            src: url(fonts/icomoon.eot?r7e0ib#iefix) format("embedded-opentype"), url(fonts/icomoon.ttf?r7e0ib) format("truetype"), url(fonts/icomoon.woff?r7e0ib) format("woff"), url(fonts/icomoon.svg?r7e0ib#icomoon) format("svg");
+            font-weight: 400;
+            font-style: normal;
+            font-display: block
+        }
+
+        [class*=" icon-"],
+        [class^=icon-] {
+            speak: never;
+            font-style: normal;
+            font-weight: 400;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale
+        }
+
+        .icon-phone:before {
+            content: "\e903";
+            color: #fff;
+            font-family: icomoon
+        }
+
+        .icon-instagram:before {
+            content: "\e900";
+            font-family: icomoon
+        }
+
+        .icon-mail:before {
+            content: "\e901";
+            font-family: icomoon
+        }
+
+        .icon-whatsapp:before {
+            content: "\e902";
+            font-family: icomoon
+        }
+
+        *,
+        ::after,
+        ::before {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box
+        }
+
+        ol,
+        ul {
+            padding: 0
+        }
+
+        blockquote,
+        body,
+        dd,
+        dl,
+        figcaption,
+        figure,
+        h1,
+        h2,
+        h3,
+        h4,
+        li,
+        ol,
+        p,
+        ul {
+            margin: 0
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            min-height: 100vh;
+            text-rendering: optimizeSpeed;
+            line-height: 1.5
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        a:not([class]) {
+            -webkit-text-decoration-skip: ink;
+            text-decoration-skip-ink: auto
+        }
+
+        a {
+            text-decoration: none;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s
+        }
+
+        img {
+            max-width: 100%
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font: inherit
+        }
+
+        html {
+            font-size: 10px
+        }
+
+        body {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column
+        }
+
+        header {
+            -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+            order: 1
+        }
+
+        main {
+            -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+            order: 2;
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1
+        }
+
+        footer {
+            -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+            order: 3
+        }
+
+        body * {
+            font-family: Rubik, sans-serif;
+            color: #fff;
+            line-height: 1.4
+        }
+
+        .wrapper {
+            max-width: 1152px
+        }
+
+        .container {
+            max-width: 890px;
+            padding: 0 1rem
+        }
+
+        .container,
+        .wrapper {
+            margin: 0 auto
+        }
+
+        h1 {
+            font-size: 3.4rem;
+            line-height: 40px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem
+        }
+
+        h1 span {
+            color: var(--yellow)
+        }
+
+        h2 {
+            font-size: 3rem;
+            text-transform: uppercase
+        }
+
+        h3 {
+            font-size: 2.2rem
+        }
+
+        h4 {
+            font-size: 1.8rem;
+            line-height: 21px
+        }
+
+        p {
+            font-size: 1.8rem
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1.5rem;
+            min-width: 13rem;
+            background-color: var(--yellow);
+            -webkit-box-shadow: 0 3px 6px #ab9960;
+            box-shadow: 0 3px 6px #ab9960;
+            border-radius: 5px;
+            font-size: 1.6rem;
+            color: #4a4a4a;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s;
+            border: 1px solid transparent
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+            border: 1px solid #ffe284;
+            -webkit-box-shadow: 0 2px 5px #ab9960;
+            box-shadow: 0 2px 5px #ab9960;
+            border-radius: 5px;
+            color: #fff
+        }
+
+        .video-link {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center
+        }
+
+        .video-link::before {
+            content: "";
+            display: block;
+            width: 34px;
+            height: 34px;
+            background-image: url(../img/play.svg);
+            background-size: cover;
+            margin-right: 5px
+        }
+
+        body .show {
+            opacity: 1;
+            visibility: visible;
+            z-index: 1
+        }
+
+        .header {
+            background-color: #4a4a4a
+        }
+
+        .header__inner {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #bebebe
+        }
+
+        .logo__wrapper {
+            -webkit-box-flex: 1;
+            -ms-flex: 1 0 auto;
+            flex: 1 0 auto
+        }
+
+        .header__contacts {
+            margin-right: 1.8rem
+        }
+
+        .header__contacts a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 2.1rem;
+            font-family: Rubik, sans-serif;
+            margin-bottom: .5rem;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end
+        }
+
+        .header__contacts p {
+            font-size: 1rem;
+            line-height: 1.2rem;
+            font-weight: 300
+        }
+
+        .header .btn {
+            padding: .8rem 1.5rem;
+            -webkit-box-shadow: 0 1px 6px #ffe284;
+            box-shadow: 0 1px 6px #ffe284;
+            border-radius: 30px;
+            font-size: 12px;
+            line-height: 14px;
+            color: #2c2c2c;
+            text-decoration: underline
+        }
+
+        .header .btn:hover {
+            color: #fff
+        }
+
+        .header__video-link {
+            display: none;
+            line-height: 12px;
+            font-weight: 300
+        }
+
+        .main-section {
+            background-color: #4a4a4a
+        }
+
+        .main-section__wrapper {
+            position: relative;
+            overflow: hidden
+        }
+
+        .main-section__inner {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+            padding: 2rem 0;
+            padding-bottom: 18rem
+        }
+
+        .main-section .content {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 55%;
+            flex: 0 0 55%;
+            padding: 4.5rem 0
+        }
+
+        .main-section__town {
+            display: inline-block;
+            padding: .5rem 1rem;
+            background-color: var(--yellow);
+            border-radius: 5px;
+            color: #414045;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 26px;
+            margin-bottom: 2.5rem
+        }
+
+        .main-section h4 {
+            font-weight: 400;
+            margin-bottom: 6.5rem
+        }
+
+        .main-section__buttons {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+            flex-flow: row wrap
+        }
+
+        .main-section__buttons>* {
+            margin-bottom: 2rem
+        }
+
+        .main-section .btn {
+            margin-right: 2.5em
+        }
+
+        .main-section__calc {
+            display: inline-block;
+            padding: 1.7rem 1rem;
+            font-size: 14px;
+            line-height: 17px;
+            -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+            border: 1px solid #ffe284;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-box-shadow: 0 2px 5px #ab9960;
+            box-shadow: 0 2px 5px #ab9960;
+            border-radius: 5px;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s
+        }
+
+        .main-section__calc:hover {
+            background-color: var(--yellow);
+            color: #000
+        }
+
+        .main-img {
+            position: absolute;
+            bottom: -.3rem;
+            right: 19.5rem;
+            z-index: 0
+        }
+
+        .main-img img {
+            -o-object-fit: cover;
+            object-fit: cover
+        }
+
+        .main-img::after {
+            content: url(../img/circle-main.png);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translateY(-50%) translateX(-50%);
+            -ms-transform: translateY(-50%) translateX(-50%);
+            transform: translateY(-50%) translateX(-50%);
+            z-index: -1;
+            pointer-events: none
+        }
+
+        .main-img figcaption {
+            position: absolute;
+            bottom: 12.5rem;
+            right: 0;
+            padding: .5rem;
+            color: #2c2c2c;
+            font-size: 16px;
+            line-height: 19px;
+            z-index: 1
+        }
+
+        .main-img figcaption::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 15.2rem;
+            height: 2.7rem;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translateY(-50%) translateX(-50%) skew(-20deg, 0deg);
+            -ms-transform: translateY(-50%) translateX(-50%) skew(-20deg, 0deg);
+            transform: translateY(-50%) translateX(-50%) skew(-20deg, 0deg);
+            z-index: -1;
+            background-color: var(--yellow);
+            -webkit-box-shadow: 0 0 10px #ffe284;
+            box-shadow: 0 0 10px #ffe284;
+            border-radius: 5px
+        }
+
+        .main__video-link {
+            position: absolute;
+            right: 3.5rem;
+            top: 19.7rem;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            z-index: 0
+        }
+
+        .main__video-link:hover::before {
+            -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            transform: rotate(360deg)
+        }
+
+        .main__video-link:hover {
+            color: var(--yellow)
+        }
+
+        .main__video-link::before {
+            width: 5rem;
+            height: 5rem;
+            -webkit-transition: .5s;
+            -o-transition: .5s;
+            transition: .5s
+        }
+
+        @media screen and (max-width:768px) {
+            h1 {
+                font-size: 2.5rem;
+                line-height: 26px;
+                margin-bottom: 1rem
+            }
+
+            h1 span {
+                white-space: nowrap
+            }
+
+            .main-section__inner {
+                padding: 0
+            }
+
+            .main-section__town {
+                font-size: 1.2rem;
+                padding: .5rem;
+                line-height: 14px;
+                margin-bottom: 1.8rem
+            }
+
+            .main-section h4 {
+                font-size: 12px;
+                line-height: 14px
+            }
+
+            .main-img figcaption,
+            .main-img::after,
+            .main__video-link {
+                display: none
+            }
+
+            .main-img {
+                right: -1rem
+            }
+        }
+
+        @media screen and (max-width:576px) {
+            .header .logo {
+                display: none
+            }
+
+            .header__video-link {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex
+            }
+
+            .header .btn {
+                display: none
+            }
+
+            .header__contacts a {
+                font-size: 14px;
+                line-height: 17px
+            }
+
+            .main-section .content {
+                -webkit-box-flex: 0;
+                -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+                z-index: 1
+            }
+
+            .main-img {
+                z-index: 0
+            }
+
+            .main-section-content__text {
+                width: 60%
+            }
+
+            .main-section h4 {
+                margin-bottom: 15rem;
+                width: 83%;
+                font-size: 1.6rem;
+                line-height: 2rem
+            }
+
+            .main-section .btn {
+                margin-right: 0
+            }
+
+            .main-section__buttons>* {
+                -webkit-box-flex: 1;
+                -ms-flex: 1 0 100%;
+                flex: 1 0 100%;
+                text-align: center
+            }
+        }
+
+        .video-block {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, .7);
+            opacity: 0;
+            visibility: hidden;
+            overflow: auto;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s
+        }
+
+        .pop-up {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, .7);
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: .3s;
+            -o-transition: .3s;
+            transition: .3s
+        }
+    </style>
 </head>
 
 <body>
@@ -23,21 +661,28 @@
                             <div class="content">
                                 <div class="main-section-content__text">
                                     <p class="main-section__town">г. Нур-Султан</p>
-                                    <h1>ИЗбавим вас <span>от проблем</span><br>с бухгалтерией </h1>
-                                    <h4>Берем на себя все тяготы бухучета. <br>А вы масштабируйте свой бизнес.</h4>
+                                    <h1>ИЗбавим вас <span>от проблем</span> с бухгалтерией </h1>
+                                    <h4>Берем на себя все тяготы бухучета.<br> А вы масштабируйте свой бизнес.</h4>
                                 </div>
                                 <div class="main-section__buttons">
-                                    <a href="#" class="btn">Получить консультацию</a>
-                                    <a href="#" class="main-section__calc">Рассчитать стоимость услуг</a>
+                                    <a href="#" class="btn js-openPopUpBtn">Получить консультацию</a>
+                                    <a href="https://inform.lsnova.kz/kalkulyator" class="main-section__calc">Рассчитать
+                                        стоимость услуг</a>
                                 </div>
                             </div>
                             <figure class="main-img">
-                                <img src="img/main-photo.png" alt="Tatiana Pack" width="256" height="558">
+                                <picture>
+                                    <source srcset="img/main-photo.webp" type="image/webp">
+                                    <source srcset="img/main-photo.png" type="image/jpeg">
+                                    <img src="img/main-photo.png" alt="Tetiana Pak" width="256" height="558"
+                                        loading="lazy">
+                                </picture>
                                 <figcaption class="main-img__caption">
                                     Татьяна Пак
                                 </figcaption>
                             </figure>
-                            <a href="#" class="main__video-link video-link">Посмотреть видео<br>о компании</a>
+                            <a href="#" class="main__video-link video-link js-openVideoPopUp">Посмотреть видео<br>о
+                                компании</a>
                         </div>
                     </div>
                 </div>
@@ -50,26 +695,46 @@
                         <div class="advantages__list">
                             <div class="advantages-block__wrapper">
                                 <figure class="advantages__block">
-                                    <img src="img/shield.png" alt="Security" width="48" height="61">
+                                    <picture>
+                                        <source srcset="img/shield.webp" type="image/webp">
+                                        <source srcset="img/shield.png" type="image/jpeg">
+                                        <img src="img/shield.png" alt="Безопасно снижаем налог" width="48" height="61"
+                                            loading="lazy">
+                                    </picture>
                                     <figcaption>Безопасно снижаем налоги <span>на 30%</span></figcaption>
                                 </figure>
                             </div>
                             <div class="advantages-block__wrapper">
                                 <figure class="advantages__block">
                                     <span class="advantages-block__info">67</span>
-                                    <img src="img/documents.png" alt="Documents" width="105" height="53">
+                                    <picture>
+                                        <source srcset="img/documents.webp" type="image/webp">
+                                        <source srcset="img/documents.png" type="image/jpeg">
+                                        <img src="img/documents.png" alt="Свою бухгалтерию нам доверяют" width="105"
+                                            height="53" loading="lazy">
+                                    </picture>
                                     <figcaption>Свою бухгалтерию нам доверяют <span>67 клиентов</span></figcaption>
                                 </figure>
                             </div>
                             <div class="advantages-block__wrapper">
                                 <figure class="advantages__block">
-                                    <img src="img/fin-documents.png" alt="Fin documents" width="74" height="66">
+                                    <picture>
+                                        <source srcset="img/fin-documents.webp" type="image/webp">
+                                        <source srcset="img/fin-documents.png" type="image/jpeg">
+                                        <img src="img/fin-documents.png" alt="Несем финансовую отвественность"
+                                            width="74" height="66" loading="lazy">
+                                    </picture>
                                     <figcaption>Несем финансовую <span>отвественность</span> за результат </figcaption>
                                 </figure>
                             </div>
                             <div class="advantages-block__wrapper">
-                                <figure class="advantages__block">
-                                    <img src="img/pens.png" alt="Pens" width="72" height="56">
+                                <figure class="advantages__block advantages__block--black">
+                                    <picture>
+                                        <source srcset="img/pens.webp" type="image/webp">
+                                        <source srcset="img/pens.png" type="image/jpeg">
+                                        <img src="img/pens.png" alt="регламенты и автоматизация" width="72" height="56"
+                                            loading="lazy">
+                                    </picture>
                                     <figcaption>Четкие <span>регламенты и автоматизация</span></figcaption>
                                 </figure>
                             </div>
@@ -96,11 +761,17 @@
         </section>
         <section class="subscribe">
             <div class="wrapper">
-                <div class="subscribe__inner">
-                    <img src="img/phone.png" alt="Phone">
-                    <div class="subscribe__content">
-                        <h2>Наша компания в инстаграм</h2>
-                        <a href="#" class="btn">Подписаться</a>
+                <div class="container">
+                    <div class="subscribe__inner">
+                        <picture>
+                            <source srcset="img/phone.webp" type="image/webp">
+                            <source srcset="img/phone.png" type="image/jpeg">
+                            <img src="img/phone.png" alt="Наша компания в инстаграм" width="270" loading="lazy">
+                        </picture>
+                        <div class="subscribe__content">
+                            <h2>Наша компания в инстаграм</h2>
+                            <a href="https://instagram.com/lsnova.kz" class="btn">Подписаться</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -114,36 +785,70 @@
                         <div class="decision__row">
                             <div class="decision__column">
                                 <div class="decision__item">
-                                    <img src="img/optimising.png" alt="Optimising">
+                                    <picture>
+                                        <source srcset="img/optimising.webp" type="image/webp">
+                                        <source srcset="img/optimising.png" type="image/jpeg">
+                                        <img src="img/optimising.png" alt="Оптимизация" width="136" height="99"
+                                            loading="lazy">
+                                    </picture>
                                     <p><span>Оптимизация</span> и ускорение процессов</p>
                                 </div>
                                 <div class="decision__item decision__item--higher">
-                                    <img src="img/right.png" alt="right">
+                                    <picture>
+                                        <source srcset="img/right.webp" type="image/webp">
+                                        <source srcset="img/right.png" type="image/jpeg">
+                                        <img src="img/right.png" alt="Постановка" width="171" height="91"
+                                            loading="lazy">
+                                    </picture>
                                     <p>Постановка — предложим <span>правильную</span> систему бухучета</p>
                                 </div>
                             </div>
                             <div class="decision__column decision__column--end">
                                 <div class="decision__item">
-                                    <img src="img/1c.png" alt="1c">
+                                    <picture>
+                                        <source srcset="img/1c.webp" type="image/webp">
+                                        <source srcset="img/1c.png" type="image/jpeg">
+                                        <img src="img/1c.png" alt="1c" width="96" height="96" loading="lazy">
+                                    </picture>
                                     <p><span>Предоставляем</span> лицензионную программу 1С</p>
                                 </div>
                                 <div class="decision__item decision__item--higher">
-                                    <img src="img/bank.png" alt="bank">
+                                    <picture>
+                                        <source srcset="img/bank.webp" type="image/webp">
+                                        <source srcset="img/bank.png" type="image/jpeg">
+                                        <img src="img/bank.png" alt="Работа с банками" width="146" height="111"
+                                            loading="lazy">
+                                    </picture>
                                     <p><span>Работа с банками</span> — ведение операций по расчетному счету</p>
                                 </div>
                             </div>
                         </div>
                         <div class="decision__row decision__row--narrow">
                             <div class="decision__item decision__item--higher">
-                                <img src="img/good.png" alt="good">
+                                <picture>
+                                    <source srcset="img/good.webp" type="image/webp">
+                                    <source srcset="img/good.png" type="image/jpeg">
+                                    <img src="img/good.png" alt="режим налогооблажения" width="129" height="103"
+                                        loading="lazy">
+                                </picture>
                                 <p>Подберем <span>выгодный</span> режим налогооблажения</p>
                             </div>
                             <div class="decision__item decision__item--higher">
-                                <img src="img/find.png" alt="find">
+                                <picture>
+                                    <source srcset="img/find.webp" type="image/webp">
+                                    <source srcset="img/find.png" type="image/jpeg">
+                                    <img src="img/find.png" alt="Устранение рисков" width="100" height="108"
+                                        loading="lazy">
+                                </picture>
                                 <p>Устранение рисков — <span>находим</span> способ снижения</p>
                             </div>
                         </div>
-                        <img src="img/decision-photo.png" alt="Photo" class="decision__photo">
+                        <picture>
+                            <source srcset="img/decision-photo-main.webp" type="image/webp">
+                            <source srcset="img/decision-photo-main.png" type="image/jpeg">
+                            <img src="img/decision-photo-main.png" alt="Татяна Пак" loading="lazy"
+                                class="decision__photo">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -155,7 +860,14 @@
                     <div class="our-work__list">
                         <div class="our-work___wrapper arrow">
                             <div class="our-work__item">
-                                <img src="img/calculator.png" alt="Calculator">
+                                <div class="our-work__media">
+                                    <picture>
+                                        <source srcset="img/calculator.webp" type="image/webp">
+                                        <source srcset="img/calculator.png" type="image/jpeg">
+                                        <img src="img/calculator.png" alt="Консультация" width="63" height="83"
+                                            loading="lazy">
+                                    </picture>
+                                </div>
                                 <div class="our-work__content">
                                     <span>01</span>
                                     <p>Консультация — выявляем запрос</p>
@@ -164,7 +876,14 @@
                         </div>
                         <div class="our-work___wrapper arrow">
                             <div class="our-work__item">
-                                <img src="img/commercial.png" alt="Commercial">
+                                <div class="our-work__media">
+                                    <picture>
+                                        <source srcset="img/commercial.webp" type="image/webp">
+                                        <source srcset="img/commercial.png" type="image/jpeg">
+                                        <img src="img/commercial.png" alt="Коммерческое предложение" width="91"
+                                            height="100" loading="lazy">
+                                    </picture>
+                                </div>
                                 <div class="our-work__content">
                                     <span>02</span>
                                     <p>Коммерческое предложение</p>
@@ -173,7 +892,14 @@
                         </div>
                         <div class="our-work___wrapper arrow">
                             <div class="our-work__item">
-                                <img src="img/search.png" alt="Search">
+                                <div class="our-work__media">
+                                    <picture>
+                                        <source srcset="img/search.webp" type="image/webp">
+                                        <source srcset="img/search.png" type="image/jpeg">
+                                        <img src="img/search.png" alt="Подбор решения ситуаци" width="79" height="97"
+                                            loading="lazy">
+                                    </picture>
+                                </div>
                                 <div class="our-work__content">
                                     <span>03</span>
                                     <p>Подбор решения ситуации / пакет услуг</p>
@@ -182,7 +908,14 @@
                         </div>
                         <div class="our-work___wrapper arrow">
                             <div class="our-work__item">
-                                <img src="img/document2.png" alt="Document">
+                                <div class="our-work__media">
+                                    <picture>
+                                        <source srcset="img/document2.webp" type="image/webp">
+                                        <source srcset="img/document2.png" type="image/jpeg">
+                                        <img src="img/document2.png" alt="Подписание договора" width="64" height="87"
+                                            loading="lazy">
+                                    </picture>
+                                </div>
                                 <div class="our-work__content">
                                     <span>04</span>
                                     <p>Подписание договора</p>
@@ -191,7 +924,13 @@
                         </div>
                         <div class="our-work___wrapper arrow">
                             <div class="our-work__item">
-                                <img src="img/pay.png" alt="Pay">
+                                <div class="our-work__media">
+                                    <picture>
+                                        <source srcset="img/pay.webp" type="image/webp">
+                                        <source srcset="img/pay.png" type="image/jpeg">
+                                        <img src="img/pay.png" alt="Оплата" width="95" height="86" loading="lazy">
+                                    </picture>
+                                </div>
                                 <div class="our-work__content">
                                     <span>05</span>
                                     <p>Оплата</p>
@@ -200,7 +939,14 @@
                         </div>
                         <div class="our-work___wrapper arrow">
                             <div class="our-work__item">
-                                <img src="img/files.png" alt="Files">
+                                <div class="our-work__media">
+                                    <picture>
+                                        <source srcset="img/files.webp" type="image/webp">
+                                        <source srcset="img/files.png" type="image/jpeg">
+                                        <img src="img/files.png" alt=Работа до получения максимального результата"
+                                            width="105" height="111" loading="lazy">
+                                    </picture>
+                                </div>
                                 <div class="our-work__content">
                                     <span>06</span>
                                     <p>Работа до получения максимального результата</p>
@@ -219,7 +965,12 @@
                         <div class="tasks__item-wrapper">
                             <div class="tasks__item">
                                 <div class="profile__block">
-                                    <img src="img/profile1.png" alt="Profile" width="80" height="80">
+                                    <picture>
+                                        <source srcset="img/profile1.webp" type="image/webp">
+                                        <source srcset="img/profile1.jpg" type="image/jpeg">
+                                        <img src="img/profile1.jpg" alt="Представитель" width="80" height="80"
+                                            loading="lazy">
+                                    </picture>
                                     <div class="profile__info">
                                         <span>Представитель</span>
                                         <p>г. Нур-Султан</p>
@@ -254,7 +1005,12 @@
                         <div class="tasks__item-wrapper">
                             <div class="tasks__item">
                                 <div class="profile__block">
-                                    <img src="img/profile2.png" alt="Profile" width="80" height="80">
+                                    <picture>
+                                        <source srcset="img/profile2.webp" type="image/webp">
+                                        <source srcset="img/profile2.jpg" type="image/jpeg">
+                                        <img src="img/profile2.jpg" alt="Представитель" width="80" height="80"
+                                            loading="lazy">
+                                    </picture>
                                     <div class="profile__info">
                                         <span>Представитель</span>
                                         <p>г. Нур-Султан</p>
@@ -282,7 +1038,8 @@
                                         <p>1. Штраф в размере пятнадцати процентов от суммы оборота за период не
                                             постановки на учет. При подведении итогов года компания вышла на оборот 90
                                             000 000 тенге и в конце декабря узнали о том, что пора встать на учет по НДС
-                                            . Сумма штрафа составила бы (90 000 000-79 530 000)*15%= 1 570 500
+                                            . Сумма штрафа составила бы (90 000 000-79 530 000)*15%= <span>1 570
+                                                500</span>
                                         </p>
                                         <p> 2. Штраф в размере 15 МРП (39 765 тенге) за нарушение налогоплательщиком
                                             срока подачи заявления
@@ -298,6 +1055,25 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="question">
+            <div class="wrapper">
+                <div class="container">
+                    <h2><span>Не нашли</span> ответ на свой вопрос?</h2>
+                    <p>Заполните форму и опишите ситуацию, мы свяжемся с вами в ближайшее время</p>
+                    <form method="POST" action="#" class="form" id="question-form">
+                        <h3 class="output_info"></h3>
+                        <input type="text" name="message" id="question-text" placeholder="Опишите свою ситуацию"
+                            class="input--big" required>
+                        <input type="tel" name="phone" id="question-tel" placeholder="Номер телефона" required
+                            pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
+                        <button class="btn">Получить консультацию</button>
+                        <a href="#" class="btn"><span class="whatsapp"></span> Написать на WhatsApp</a>
+                    </form>
+                    <div class="politics__wrapper">
+                        <a href="#" class="politics">Политика конфиденциальности</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -309,13 +1085,13 @@
                         <a href="index.html" class="logo">
                             <img src="img/logo.svg" alt="Ls nova">
                         </a>
-                        <a href="#" class="header__video-link video-link">Видео <br>о компании</a>
+                        <a href="#" class="header__video-link video-link js-openVideoPopUp">Видео <br>о компании</a>
                     </div>
                     <div class="header__contacts">
-                        <a href="tel:+77017901090" class="icon-phone">+7 701 790 10 90</a>
+                        <a href="tel:+77773304050" class="icon-phone">+7 777 330 40 50</a>
                         <p>ул.Иманбаева 8/2 , 5 этаж, офис 2</p>
                     </div>
-                    <a href="#" class="btn">
+                    <a href="#" class="btn js-openPopUpBtn">
                         Перезвоните мне
                     </a>
                 </div>
@@ -323,8 +1099,72 @@
         </div>
     </header>
     <footer class="footer">
-
+        <div class="wrapper">
+            <div class="container">
+                <div class="footer__inner">
+                    <a href="index.html" class="logo">
+                        <picture>
+                            <source srcset="img/logo-color.webp" type="image/webp">
+                            <source srcset="img/logo-color.png" type="image/jpeg">
+                            <img src="img/logo-color.png" alt="Ls nova" width="112" height="68" loading="lazy">
+                        </picture>
+                    </a>
+                    <div class="politics__wrapper">
+                        <a href="#" class="politics">Политика конфиденциальности</a>
+                    </div>
+                    <div class="footer__contacs">
+                        <div class="footer__soc-media">
+                            <a href="https://instagram.com/lsnova.kz" class="icon-instagram"></a>
+                            <a href="#" class="icon-whatsapp"></a>
+                        </div>
+                        <a href="mailto:isnova_2030@mail.ru" class="footer__mail icon-mail">info@lsnova.kz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
+    <div id="video-block" class="video-block">
+        <span class="close">x</span>
+        <div class="video__content">
+            <video src="files/video.mp4" controls></video>
+        </div>
+    </div>
+    <div id="pop-up" class="pop-up">
+        <span class="close">x</span>
+        <div class="pop-up__content">
+            <h2>Для получения консультации заполните, пожалуйста, данные и мы свяжемся с вами
+                в ближайшее время</h2>
+            <form method="post" action="#" class="form pop-up__form" id="pop-up-form">
+                <h3 class="output_info"></h3>
+                <input type="text" name="pop-up__name" id="pop-up__name" placeholder="Ваше имя" required>
+                <input type="tel" name="pop-up__tel" id="pop-up__tel" placeholder="Номер телефона" required>
+                <button class="btn">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+    <div id="pop-up__leave" class="pop-up__leave pop-up">
+        <span class="close">x</span>
+        <div class="pop-up__content">
+            <h2>Уже уходите? Оставьте адрес вашей почты
+                и получите наш чек-лист бесплатно!</h2>
+            <form method="post" action="#" class="form pop-up__form" id="pop-up-leave-form">
+                <h3 class="output_info"></h3>
+                <input type="email" name="pop-up-leave__email" id="pop-up-leave__email" placeholder="Email" required>
+                <button class="btn">Получить чек-лист</button>
+            </form>
+        </div>
+    </div>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.min.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript>
+        <link rel="stylesheet" href="styles/main.min.css">
+    </noscript>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/telegram.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
